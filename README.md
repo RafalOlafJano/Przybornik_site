@@ -1,2 +1,2 @@
 # Przybornik_site
-Pliki strony Przybornik
+Pliki strony Przybornik - projekt jeszcze nie skonczony. 
