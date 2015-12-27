@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+   		<h1> PRZYBORNIK </h1>
+    	<h2> Find your Data / Znajdź swoje dane </h2>
+    	<h3> Opis: Proszę podać jakiej tabeli, jakiego użytkownika szukasz. Możesz drogi użytkowniku podać frazę która będzie szukana w wybranej tabeli, możesz wybrać jakie będzie sortowanie elementów szukanej tabeli. </h3>
+
+            <br> <h4> <strong>  Tutaj przeglądniesz księgę gości : </h4> </strong>
+
+            <h2><a href="http://127.0.0.1:8000/find/find_guestbook/">  Pokaż wpisy w księdze gośći  </a></h2>
+
+
+            <br> <h4> <strong>  Twoje notatki zostaną wyświetlone poniżej : </h4> </strong>
+
+            <h2><a href="http://127.0.0.1:8000/find/find_note/">  Pokaż moje notatki  </a></h2>
+
+
+            <br> <h4> <strong>  Wpisy w twoim terminarzu znajdziesz tutaj : </h4> </strong>
+
+            <h2><a href="http://127.0.0.1:8000/find/find_timetable/">  Pokaż moje terminy  </a></h2>
+
+
+            <br> <h4> <strong>  Czy chcesz zobaczyć wyniki ankiety zadowolenia użytkownika ? </h4> </strong>
+
+            <h2><a href="http://127.0.0.1:8000/find/find_pollster/">  Pokaż wyniki ankiety  </a></h2>
+
+        <br><a href="http://127.0.0.1:8000/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+        
+    </body>
+</html>

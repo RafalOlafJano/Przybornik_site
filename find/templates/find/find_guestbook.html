@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+   		<h1> PRZYBORNIK </h1>
+    	<h2> Find your Data / Znajdź swoje dane </h2>
+    	<h3> Opis: Poniżej będzie można dowolnie przeglądać zawartość tabeli notatek użytkownika. </h3>
+
+            <h3> <strong>  LISTA gości strony </h3> </strong> <br>
+
+            {% for guest in guests %}
+
+                <h4>Pierwsze imie </h4>{{ guest.pierwsze_imie }}
+                <h4>Drugie imie </h4>{{ guest.drugie_imie }}
+                <h4>Nazwisko </h4>{{ guest.nazwisko }}
+                <br>
+
+                <h4>Zawód </h4>{{ guest.zawód }}
+                <br>
+
+                <h4>Kontakt z gościem </h4>{{ guest.email }}
+                <h4>Komentarz gościa </h4>{{ guest.text }}
+                <br>
+                <br>
+
+            {% endfor %}
+
+        <br><a href="http://127.0.0.1:8000/find/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+        
+    </body>
+</html>

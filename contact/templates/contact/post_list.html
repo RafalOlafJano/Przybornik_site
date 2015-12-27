@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+
+    <body>
+
+   		<h1> PRZYBORNIK </h1>
+    	<h2> Contact / Kontakt </h2>
+    	<h3> Opis: Można na tej stronie dowiedzieć się jaki jest możliwy kontakt z twórcą projektu, aby zadać pytanie odnośnie działania/niedziałania programów webowych lub dostarczyć feedback twórcy. </h3>
+
+    {% for query in query %}    	
+    <div>
+       
+        <h2><a><br />{{ query.title }}</a></h2>
+
+        <h4><strong><br /><em>Nazwa Projektu : {{ query.project_name }}</em></strong></h4>
+
+        <h4><strong><em>Autor Projektu : {{ query.author }}</em></strong></h4>
+
+        <h4><strong><em>Telefon kontaktowy : {{ query.telephone }}</em></strong></h4>
+
+        <h4><strong><em>Poczta elektroniczna : {{ query.email }}</em></strong></h4>
+
+        <h4><strong><em>Opis Projektu : {{ query.about }}</em></strong></h4>
+        
+    </div>
+    {% endfor %}
+
+    <br><a href="http://127.0.0.1:8000/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+
+    </body>
+
+</html>

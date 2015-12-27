@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+        <h1> PRZYBORNIK </h1>
+        <h2> Main Menu / Główne Menu </h2>
+        <h3> Opis: Proszę wybrać jeden z poniższych programów, po czym zostaniesz użytkowniku przeniesiony do strony z programem. </h3>
+        
+        <div>
+            <h2><br /> Wybierz program : </h2>
+        </div>
+
+        <div>
+            <h2><a href="http://127.0.0.1:8000/contact/">Contact</a></h2>
+            <h4><p> Dane kontaktowe i informacje odnośnie projektu Przybornik . </p></h4>
+        </div>
+
+        <div>
+            <h2><a href="http://127.0.0.1:8000/login">Relog user</a></h2>
+            <h4><p> Ponowne zalogowanie do bazy danych, można zalogować się testowo na nowe konto w bazie lub na już istniejące konto. </p></h4>
+        </div>
+
+         <div>
+            <h2><a href="http://127.0.0.1:8000/find/">Find your data</a></h2>
+            <h4><p> Uzyskanie dostępu do danych ulokowanych w bazie danych w zależności od uprawnień dostępu obecnie zalogowanego użytkownika. </p></h4>
+        </div>
+
+         <div>
+            <h2><a href="http://127.0.0.1:8000/timetable/">TimeTable</a></h2>
+            <h4><p> Zaplanuj swój rozkład dnia, zaplanuj swój grafik zajęć dodatkowych, wszystko w jednym podprogramie. </p></h4>
+        </div>
+
+         <div>
+            <h2><a href="http://127.0.0.1:8000/guestbook/">Guest Book</a></h2>
+            <h4><p> Księga gości. </p></h4>
+        </div>
+
+         <div>
+            <h2><a href="http://127.0.0.1:8000/pollster/">Pollster</a></h2>
+            <h4><p> Program zbiera dane od użytkowników a następnie przechowuje je w tabelach bazy danych, a dostęp do nich można uzyskać w programie "Find your data". </p></h4>
+        </div>
+
+         <div>
+            <h2><a href="http://127.0.0.1:8000/note/">Quick Note</a></h2>
+            <h4><p> Dodawanie w szybki sposób krótkiej notatki przechowywanej w tabeli "notatka". </p></h4>
+        </div>
+
+    </body>
+</html>

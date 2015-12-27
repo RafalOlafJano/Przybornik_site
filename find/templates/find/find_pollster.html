@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+   		<h1> PRZYBORNIK </h1>
+    	<h2> Find your Data / Znajdź swoje dane </h2>
+    	<h3> Opis: Poniżej będzie można dowolnie przeglądać zawartość tabeli notatek użytkownika. </h3>
+
+            <h3> <strong>  LISTA gości strony </h3> </strong> <br>
+
+            {% for poll in polls %}
+
+                 
+                <h2>Użytkownik : </h2>
+                <!--<h4>{{ user }}</h4>-->
+                {{ poll.author }}
+                
+                <h3>PIERWSZE pytanie : </h3>
+                <h4> Czy jesteś zadowolony z interface'u użytkownika zastosowanego w PRZYBORNIKU ? </h4>
+                {{ poll.odp1 }}
+                <h3>DRUGIE pytanie : </h3>
+                <h4> Czy oprogramowanie PRZYBORNIK spełniło twoje wymagania i zaspokoiło twoje potrzeby ? </h4>
+                {{ poll.odp2 }}
+                <h3>TRZECIE pytanie : </h3>
+                <h4> Czy polecasz oprogramowanie reszcie internautów ? </h4>
+                {{ poll.odp3 }}
+                <br>
+                <br>
+
+            {% endfor %}
+
+        <br><a href="http://127.0.0.1:8000/find/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+        
+    </body>
+</html>

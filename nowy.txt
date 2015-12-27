@@ -1,4 +1,16 @@
 To jest nowy dokument tekstowy	
 
+# Przybornik_site
+Pliki strony Przybornik - projekt jeszcze nie skonczony.
+
+Aby uruchomiæ stronê na silniku SQLITE proszê wkleiæ w pliku
+mysite/setting.py kod :
+
+DATABASES = {
+	    'default': {
+	        'ENGINE': 'django.db.backends.sqlite3',
+	        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+	    }
+	}
 
 

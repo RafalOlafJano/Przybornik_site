@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+        <h1> PRZYBORNIK </h1>
+        <h2> Pollster / Ankieter </h2>
+        <h3> Opis: Proszę udzielić odpowiedzi na zadane pytanie w ankiecie zadowolenia użytkownika z oprogramowania PRZYBORNIK. </h3><br>
+
+        <h4> Proszę zaznaczyć "fajką" poniższą z odpowiedzi, z którą się zgadzasz. Jeżeli jedno z poniższych pól zostanie wypełnione będie to oznaczać odpowiedź na "tak", a pole pozostawione puste będzie oznaczało udzielenie odpowiedzi na "nie". </h4><br> 
+        
+        <h4>Proszę pamiętać, że tylko ocena na "tak" jest pozytywną oceną, za to tylko ocena na "nie" jest negatywną oceną.</h4><br>
+
+
+        <form action="/pollster/" method="POST">
+            {% csrf_token %}
+
+            <h4> <strong> {{ form.odp1 }} Czy jesteś zadowolony z interface'u użytkownika zastosowanego w PRZYBORNIKU ? </h4> </strong> <br>  
+            <h4> <strong> {{ form.odp2 }} Czy oprogramowanie PRZYBORNIK spełniło twoje wymagania i zaspokoiło twoje potrzeby ? </h4></strong> <br>
+            <h4> <strong> {{ form.odp3 }} Czy polecasz oprogramowanie reszcie internautów ? </h4> </strong> <br>
+
+            <input type="submit" value="Wyślij odpowiedź">
+
+
+        </form>
+
+    <br><a href="http://127.0.0.1:8000/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+
+    </body>
+</html>

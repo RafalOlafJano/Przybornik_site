@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <!--<link href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+          rel="stylesheet" media="screen">-->
+    
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}" rel="stylesheet" media="screen">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+  
+    <h1> PRZYBORNIK </h1>
+    <h2> Relog Website User / Zmiana użytkownika strony </h2>
+
+    <div>
+      <br><h3>Obecnie zalogowany użytkownik : </h3> 
+      <h3><strong>{{ user }}</strong></h3>
+      <br>
+      {% if user.is_anonymous %}
+      <a href="{% url 'django.contrib.auth.views.login' %}"><h2>Login?</h2></a>
+      {% else %}
+      <a href="{% url 'django.contrib.auth.views.logout' %}"><h2>Logout?</h2></a>
+      {% endif %}
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <br><a href="http://127.0.0.1:8000/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+
+    <script src="{% static "css/przybornik.css" %}"></script>
+  </body>
+</html>

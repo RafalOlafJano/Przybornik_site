@@ -1,0 +1,48 @@
+head {
+
+}
+
+
+h1 {
+    font-family: 'Lobster', cursive;
+    color: #FA0A16;
+}
+
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+	color: #FA6E0A;
+}
+
+
+h3 {
+	font-family: 'Lora', serif;
+	color: #042FD9;
+}
+
+
+h4 {
+	font-family: 'Lora', serif;
+	color: #042FD9;
+}
+
+
+body {
+	background-color: #E1E5FA;
+    padding-left: 15px;
+}	
+
+p {
+	font-family: 'Lora', serif;
+	color: #2B2C30;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

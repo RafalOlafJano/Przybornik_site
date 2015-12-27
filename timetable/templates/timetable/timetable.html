@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+   		<h1> PRZYBORNIK </h1>
+    	<h2> Terminarz / TimeTable </h2>
+    	<h3> Opis: Proszę wypełnić formularz, aby zapisać informację o swoich spotkaniach / rzeczach do zrobienia, by później o nich nie zapomnieć. </h3>
+
+        <form action="/timetable/" method="POST">
+            {% csrf_token %}
+
+            <!--{% for timetable in timetables %}
+            {% endfor %}-->
+
+            <br><table border="1" style="width:80%">
+                    <tr>
+                        <th>PODAJ DZIEŃ</th>
+                        <th>PODAJ MIESIĄC</th>
+                        <th>PODAJ ROK</th>
+                        <th>PODAJ GODZINĘ</th>
+                        <th>PODAJ MINUTĘ</th>
+                        <th>ZAMIEŚĆ KOMENTARZ</th>
+                    </tr>
+                    <tr>
+                        <td>{{ form.day }}</td>
+                        <td>{{ form.month }}</td>
+                        <td>{{ form.year }}</td>
+                        <td>{{ form.hour }}</td>
+                        <td>{{ form.minute }}</td>
+                        <td>{{ form.text }}</td>
+
+                    </tr>
+            </table>
+
+            <br><br><input type="submit" value="Opublikuj wpis w terminarzu">
+
+        </form>
+
+        <br><a href="http://127.0.0.1:8000/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+        
+    </body>
+</html>

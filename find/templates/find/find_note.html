@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>PRZYBORNIK</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="{% static "css/przybornik.css" %}">
+
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+        
+    </head>
+    <body>
+   		<h1> PRZYBORNIK </h1>
+    	<h2> Find your Data / Znajdź swoje dane </h2>
+    	<h3> Opis: Poniżej będzie można dowolnie przeglądać zawartość tabeli notatek użytkownika. </h3>
+
+            <h3> <strong>  Twoje notatki znajdziesz poniżej : </h3> </strong> <br>
+
+            {% for note in notes %}
+            
+                <h2>Użytkownik : </h2>
+                <h4>{{ user }}</h4>
+                <!--{{ note.user }}
+                -->
+                <h4>Tytuł notatki </h4>{{ note.title }}
+                <br>
+
+                <h4>Data publikacji </h4>{{ note.created_date }}
+                <br>
+
+                <h4>Treść </h4>{{ note.text }}
+                <br>
+                <br>
+
+            {% endfor %}
+
+        <br><a href="http://127.0.0.1:8000/find/"><h2> POWRÓT DO MENU GŁÓWNEGO </h2></a>
+        
+    </body>
+</html>
