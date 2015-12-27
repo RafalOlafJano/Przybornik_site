@@ -1,3 +1,4 @@
+# coding=UTF-8
 from django.shortcuts import render, redirect
 from django.forms import ModelForm
 from .models import GBook
@@ -10,7 +11,7 @@ from .models import GBook
 class GBookForm(ModelForm):
     class Meta:
         model = GBook
-        fields = ['pierwsze_imie', 'drugie_imie', 'nazwisko', 'zawód', 'email', 'text']
+        fields = ['pierwsze_imie', 'drugie_imie', 'nazwisko', 'zawod', 'email', 'text']
 		
 
 

@@ -19,5 +19,5 @@ class WypelnionaAnkieta(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-class Meta:
-    db_table = "pollster"
+    class Meta:
+        db_table = "pollster"

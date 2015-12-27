@@ -29,5 +29,5 @@ class TimeTable(models.Model):
 	def __str__(self):
 		return self.title
 
-class Meta:
-    db_table = "timetable"
+	class Meta:
+		db_table = "timetable"
